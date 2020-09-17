@@ -8,14 +8,23 @@ namespace PositiveNegative
         {
             /*The program checks if the number is positive or negative*/
             Console.WriteLine("Enter your number: ");
+            var userInput = Int32.Parse(Console.ReadLine());
 
-            int userNumber = Console.ReadLine();
-            if(userNumber > 0)
+            if (userInput > 0)
             {
-                Console.WriteLine("The number is negative.");
-            } else if
+                Console.WriteLine("Your number is positive.");
+            }
+            else if (userInput < 0)
             {
-                Console.WriteLine("The number is positive.");
+                Console.WriteLine("Your number is negative.");
+            }
+            else if (userInput == 0)
+            {
+                Console.WriteLine("You entered 0, please enter another number.");
+            }
+            else
+            {
+                Console.WriteLine("Please try again.");
             }
 
         }
